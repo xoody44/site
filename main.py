@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-#from flask_login import LoginManager, UserMixin
+#from flask_login impor LoginManager, UserMixin
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
