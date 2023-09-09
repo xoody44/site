@@ -1,0 +1,14 @@
+.btn {
+    font-size: 125%;
+    background-color: white;
+    color: black;
+    margin-top: 15px;
+    box-shadow: 0 0 30px #fffcfc;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.4s;
+}
+.btn:hover {
+    background-color: var(--clr-accent);
+    color: var(--clr-light);
+    transform: translateY(-3px);
+    box-shadow: 0 0 0 var(--clr-accent);
+}
