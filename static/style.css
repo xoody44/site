@@ -6,6 +6,9 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 div#form_input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #1f2930;
     color: white;
     font-size: 150%;
@@ -35,7 +38,7 @@ input:hover {
     background-color: white;
     color: black;
     margin-top: 15px;
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    transition: all 0.3s;
 }
 .btn:hover {
     background-color: var(--clr-accent);
@@ -48,7 +51,7 @@ input:hover {
     text-decoration: none;
     color: black;
     margin-top: 15px;
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    transition: all 0.3s;
 }
 .mm:hover {
     background-color: var(--clr-accent);
