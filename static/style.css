@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
 body {
     background-color: white;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 div#form_input {
     background-color: #1f2930;
