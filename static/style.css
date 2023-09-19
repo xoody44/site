@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
 body {
     background-color: white;
@@ -15,11 +15,12 @@ div#form_input {
     width: 400px;
     height: 225px;
     margin-top: 3%;
-    margin-left: 35%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin-left: 40%;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
     border-radius: 25px;
-    left: 300px;
     border: 3px solid #041424;
 }
 input {
