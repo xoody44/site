@@ -36,7 +36,7 @@ body {
 .r1:hover {
     background-color: var(--clr-accent);
     color: var(--clr-light);
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .r2 {

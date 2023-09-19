@@ -24,6 +24,7 @@ div#form_input {
     border: 3px solid #041424;
 }
 input {
+    margin: 5px;
     background-color: white;
     border-radius: 5px;
     border: 0px solid black;
@@ -32,7 +33,7 @@ input {
 input:hover {
     background-color: var(--clr-accent);
     color: var(--clr-light);
-    transform: translateY(-3px);
+    transform: translateY(-1px);
 }
 
 .btn {
