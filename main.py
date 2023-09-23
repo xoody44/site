@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, redirect
-#from flask_login impor LoginManager, UserMixin
+from flask_login import LoginManager, UserMixin
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///newflask.db'
 db = SQLAlchemy(app)
-#manager = LoginManager(app)
+manager = LoginManager(app)
 
 
 class Post(db.Model):
@@ -14,9 +14,10 @@ class Post(db.Model):
     password = db.Column(db.String(100), nullable=False)
 
 
-#@manager.user_loader
-#def load_user(user_id):
-#    return Post.get(user_id)
+@manager.user_loader
+def load_user(user_id):
+    return Post.get(user_id)
+
 
 @app.route('/')
 def index():
@@ -56,6 +57,5 @@ def reviews():
 
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port=5000)
-
 
 # env\Scripts\activate $env:FLASK_APP = "main.py" $env:FLASK_DEBUG=1
