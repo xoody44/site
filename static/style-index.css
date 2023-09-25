@@ -5,9 +5,8 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-/*
 .bg2 {
-    animation: ColorChange 15s ease infinite alternate;
+    animation: ColorChange 10s ease infinite alternate;
     height: 1080px;
     weight: 1920px;
     position: relative;
@@ -23,7 +22,6 @@ body {
         background-color: #6c757d;
     }
 }
-*/
 
 .btn {
     font-size: 125%;

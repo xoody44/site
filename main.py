@@ -29,6 +29,11 @@ def buy():
     return render_template('buy.html')
 
 
+@app.route('/calc')
+def calc():
+    return render_template('calc.html')
+
+
 @app.route('/form', methods=['POST', 'GET'])
 def form():
     if request.method == "POST":
