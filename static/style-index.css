@@ -10,9 +10,9 @@ body {
     height: 1080px;
     weight: 1920px;
     position: relative;
-    background-color: #1a1a1a;
+    background-color: white;
 }
-
+/*
 @keyframes ColorChange {
     0% {
         background-color: #000000;
@@ -22,7 +22,7 @@ body {
         background-color: #6c757d;
     }
 }
-
+*/
 .btn {
     font-size: 125%;
     background-color: white;

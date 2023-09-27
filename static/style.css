@@ -11,15 +11,11 @@ div#form_input {
     justify-content: center;
     background-color: #1f2930;
     color: white;
-    font-size: 150%;
-    width: 400px;
-    height: 225px;
+    font-size: 200%;
+    width: 800px;
+    height: 450px;
+    margin-left: 30%;
     margin-top: 3%;
-    margin-left: 40%;
-    padding-top: 100px;
-    padding-bottom: 60px;
-    padding-left: 80px;
-    padding-right: 80px;
     border-radius: 25px;
     border: 3px solid #041424;
 }
@@ -28,7 +24,7 @@ input {
     background-color: white;
     border-radius: 5px;
     border: 0px solid black;
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    transition: all 0.3s;
 }
 input:hover {
     background-color: var(--clr-accent);
@@ -38,6 +34,7 @@ input:hover {
 
 .btn {
     background-color: white;
+    font-size: 115%;
     color: black;
     margin-top: 15px;
     transition: all 0.3s;
