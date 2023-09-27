@@ -34,6 +34,16 @@ def calc():
     return render_template('calc.html')
 
 
+@app.route('/help')
+def help():
+    return render_template('help.html')
+
+
+@app.route('/reviews')
+def reviews():
+    return render_template('reviews.html')
+
+
 @app.route('/form', methods=['POST', 'GET'])
 def form():
     if request.method == "POST":
@@ -48,16 +58,6 @@ def form():
             return 'ошибка'
     else:
         return render_template('form.html')
-
-
-@app.route('/help')
-def help():
-    return render_template('help.html')
-
-
-@app.route('/reviews')
-def reviews():
-    return render_template('reviews.html')
 
 
 if __name__ == '__main__':
