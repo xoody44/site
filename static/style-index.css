@@ -4,7 +4,7 @@ body {
     weight: 100%;
     font-family: 'Raleway', sans-serif;
 }
-
+/*
 .bg2 {
     animation: ColorChange 10s ease infinite alternate;
     height: 1080px;
@@ -12,6 +12,7 @@ body {
     position: relative;
     background-color: white;
 }
+*/
 /*
 @keyframes ColorChange {
     0% {
@@ -36,4 +37,13 @@ body {
     color: var(--clr-light);
     transform: translateY(-3px);
     box-shadow: 0 0 0 var(--clr-accent);
+}
+
+div#particles-js {
+    z-index: -1;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
 }

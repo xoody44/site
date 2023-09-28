@@ -21,9 +21,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+    margin-top: 50px;
+    padding-top: 400px;
+    min-height: 30vh;
     background-color: #3d4954;
     border-radius: 30px;
 }
@@ -85,4 +85,13 @@ output {
     top: -300px;
     left: 30%;
     color: white;
+}
+
+div#particles-js {
+    z-index: -1;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
 }
