@@ -1,7 +1,7 @@
 const conf = {
   "particles": {
     "number": {
-      "value": 150,
+      "value": 200,
       "density": {
         "enable": true,
         "value_area": 900
@@ -36,7 +36,7 @@ const conf = {
       }
     },
     "size": {
-      "value": 3,
+      "value": 2,
       "random": true,
       "anim": {
         "enable": false,
@@ -54,7 +54,7 @@ const conf = {
     },
     "move": {
       "enable": true,
-      "speed": 1,
+      "speed": 0.7,
       "direction": "none",
       "random": true,
       "straight": false,

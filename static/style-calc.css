@@ -37,10 +37,21 @@ body{
     left: -300px;
 }
 
-output {
+output#volume {
     position: absolute;
     left: -40px;
     top: -20px;
+    padding: 5px;
+    color: black;
+    background-color: #3d4954;
+    border-radius: 10px 10px 0px 10px;
+    font-size: 175%;
+}
+
+output#price {
+    position: absolute;
+    left: -40px;
+    top: 20px;
     padding: 5px;
     color: black;
     background-color: #3d4954;

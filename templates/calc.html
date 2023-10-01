@@ -28,12 +28,23 @@
         <span class="text t">Выберите количество ELO, которое вы хотите иметь на своем аккаунте</span>
         <div class="slider">
             <output for="fade" id="volume">100 ELO</output>
+            <output for="fade" id="price">К оплате: 100₽</output>
             <input type="range" id="fade" min="100" max="4500" value="100" step="25" oninput="outputUpdate(value)">
             <script type="text/javascript">
                 function outputUpdate(vol) {
                     var output = document.querySelector('#volume');
+                    var output1 = document.querySelector('#price');
                     output.value = vol + " ELO";
+                    output1.value = "К оплате: " + vol * 5 + "₽";
                 }
+
+
+
+
+
+
+
+
 
 
 
