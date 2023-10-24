@@ -14,6 +14,10 @@ class Post(db.Model):
     password = db.Column(db.String(100), nullable=False)
 
 
+# with app.app_context():
+#    mail = db.session.execute(db.select(email)).scalars()
+
+
 @manager.user_loader
 def load_user(user_id):
     return Post.get(user_id)
