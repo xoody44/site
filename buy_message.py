@@ -2,7 +2,7 @@ import smtplib
 from email.mime.text import MIMEText
 
 
-def send_message(recipient, message):
+def send_message(recipient: str, message: str) -> str:
     sender = "melnikov2007@list.ru"
     password = "tvTMhCkbvPd4kxZwiHwN"
     server = smtplib.SMTP('smtp.mail.ru', 587)
@@ -19,9 +19,9 @@ def send_message(recipient, message):
 
 
 def main():
-    recipient = input("write email for message ")
-    message = input("write message ")
-    print(send_message(message=message, recipient=recipient))
+    recipient = input()
+    message = "Arulm0675:QhcVzvOG283yYq:silentfixxit41@gazeta.pl:oA5kFypaa2UtqGx"
+    send_message(message=message, recipient=recipient)
 
 
 if __name__ == "__main__":

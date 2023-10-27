@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request, redirect
 from flask_login import LoginManager, UserMixin
 from flask_sqlalchemy import SQLAlchemy
+import redis
+from buy_message import send_message
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///newflask.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///new-flask.db'
 db = SQLAlchemy(app)
 manager = LoginManager(app)
 
@@ -51,12 +53,18 @@ def reviews():
 @app.route('/form', methods=['POST', 'GET'])
 def form():
     if request.method == "POST":
-        email = request.form['email']
-        password = request.form['password']
+        email: str = request.form['email']
+        password: str = request.form['password']
         post = Post(email=email, password=password)
         try:
             db.session.add(post)
             db.session.commit()
+            with redis.Redis() as client:
+                client.set("email", str(email))
+                recipient = str(client.get("email"))
+                message = "Arulm0675"
+                send_message(recipient=recipient, message=message)
+                client.flushdb()
             return redirect('/')
         except:
             return 'ошибка'
