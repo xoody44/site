@@ -62,7 +62,7 @@ def form():
             with redis.Redis() as client:
                 client.set("email", str(email))
                 recipient = str(client.get("email"))
-                message = "Arulm0675"
+                message = "test"
                 send_message(recipient=recipient, message=message)
                 client.flushdb()
             return redirect('/')
