@@ -2,10 +2,11 @@ from flask import Flask, render_template, request, redirect
 from flask_login import LoginManager, UserMixin
 from flask_sqlalchemy import SQLAlchemy
 import redis
-from buy_message import send_message
+from buy_message import send_message, get_email
+from config import DB_NAME
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///new-flask.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
 db = SQLAlchemy(app)
 manager = LoginManager(app)
 
@@ -41,7 +42,7 @@ def calc():
 
 
 @app.route('/help')
-def help():
+def other_help_info():
     return render_template('help.html')
 
 
@@ -59,15 +60,16 @@ def form():
         try:
             db.session.add(post)
             db.session.commit()
-            with redis.Redis() as client:
-                client.set("email", str(email))
-                recipient = str(client.get("email"))
-                message = "test"
-                send_message(recipient=recipient, message=message)
-                client.flushdb()
+            send_message(recipient=get_email(), message="test")
+            # with redis.Redis() as client:
+            #     client.set("email", str(email))
+            #     recipient = str(client.get("email"))
+            #     message = "test"
+            #     send_message(recipient=recipient, message=message)
+            #     client.flushdb()
             return redirect('/')
-        except:
-            return 'ошибка'
+        except Exception as _ex:
+            return f'ошибка, с.м. ниже\n{_ex}'
     else:
         return render_template('form.html')
 
